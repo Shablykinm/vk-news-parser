@@ -31,6 +31,8 @@ RUN npm install --production
 # Копируем исходный код
 COPY . .
 
+RUN chown -R node:node /usr/src/app
+USER node
 
 # Запускаем приложение
 CMD ["npm", "start"]
