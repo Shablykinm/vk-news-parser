@@ -5,8 +5,8 @@ services:
     build: .
     image: vk-news-parser:latest
     container_name: vk-news-parser
-    env_file:
-      - .env
+    #env_file:
+    #  - .env
     volumes:
       - ./config:/usr/src/app/config
     restart: unless-stopped
